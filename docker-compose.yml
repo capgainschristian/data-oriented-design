@@ -1,6 +1,6 @@
 services:
   app:
-    build: ./src
+    build: .
     volumes:
-      - ./src:/src
-    command: python3 src/main.py
+      - .:/usr/src/app
+    command: python3 main.py

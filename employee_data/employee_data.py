@@ -41,19 +41,15 @@ class EmployeeData:
         else:
             print(f"Employee with ID {id} not found.")
             return None
-
-
-employee_data = EmployeeData()
-
-employee_data.add_employee(1, "Christian", 200000)
-employee_data.add_employee(2, "Bob", 60000)
-employee_data.add_employee(3, "Michael", 125000)
-
-employee_data.update_employee(2, name="John")
-
-john = employee_data.lookup_employee(2)
-print(john)
-
-employee_data.delete_employee(3)
-
-deleted = employee_data.lookup_employee(3)
+        
+    def employee_name_lookup(self, name):
+        if name in self.names:
+            index = self.names.index(name)
+            return {
+                "id": self.ids[index],
+                "name": self.names[index],
+                "salary": self.salaries[index],
+            }
+        else:
+            print(f"Employee with name {name} not found.")
+            return None
