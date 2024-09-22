@@ -4,9 +4,9 @@ from controllers.employee_controller import EmployeeDataController
 employee_data = EmployeeData()
 controller = EmployeeDataController(employee_data)
 
-employee_data.add_employee(1, "Christian", 200000)
-employee_data.add_employee(2, "Bob", 60000)
-employee_data.add_employee(3, "Michael", 125000)
+employee_data.add_employee(1, "Christian", 200000, "IT", "wild wings")
+employee_data.add_employee(2, "Bob", 60000, "HR", "pizza")
+employee_data.add_employee(3, "Michael", 125000, "Sales", "pho")
 
 employee_data.update_employee(2, name="John")
 
