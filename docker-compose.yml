@@ -3,4 +3,4 @@ services:
     build: .
     volumes:
       - .:/usr/src/app
-    command: python3 main.py
+    command: python -m tests.test_main 

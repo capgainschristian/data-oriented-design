@@ -1,8 +1,0 @@
-Use container for python3 binary:
-docker compose run app bash
-
-Run main.py:
-docker compose up
-
-Run test from parent directory while inside the container:
-python -m tests.test_main

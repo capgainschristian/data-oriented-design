@@ -25,4 +25,25 @@ The EmployeeData class fully encapsulates employee-related data management. The 
 
 ### Quick Start
 
+The tests module will create fake data for you to verify that the application runs.
+
+If you have Docker installed, just run:
+
+```
+docker compose up
+```
+
+If you don't, while you're in the root directory, run:
+
+```
+python -m tests.test_main
+```
+
 ### Working on the Application
+You can directly edit the Python files and run the Python executable, or you can use Docker if you don't have Python installed:
+
+```
+docker compose run app bash
+```
+
+Once you're in the Python container, you'll have access to all of the application files and Python executable.
