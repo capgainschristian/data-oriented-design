@@ -5,11 +5,13 @@ class EmployeeData:
         self.salaries = []
         self.departments = []
         self.favorite_foods = []
-
+        self.available_departments = ["HR", "IT", "Finance", "Marketing", "Sales", "Operations"]
     
     def add_employee(self, id, name, salary, department, favorite_food):
         if id in self.ids:
-            print(f"Employee with ID {id} already exists.")
+            raise ValueError(f"Employee with ID {id} already exists.")
+        if department not in self.available_departments:
+            raise ValueError(f"Department {department} is not a valid choice.")
         else:
             self.ids.append(id)
             self.names.append(name)
@@ -35,7 +37,7 @@ class EmployeeData:
                 self.names[index] = name
             if salary is not None:
                 self.salaries[index] = salary
-            if department is not None:
+            if department is not None and department in self.available_apartments:
                 self.departments[index] = department
             if favorite_food is not None:
                 self.favorite_foods[index] = favorite_food

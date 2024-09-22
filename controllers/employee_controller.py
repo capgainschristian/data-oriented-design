@@ -33,3 +33,9 @@ class EmployeeDataController:
             "lowest salary": lowest,
             "highest salary": highest,
         }
+    
+    def get_total_salaries(self):
+        total = 0
+        for i in range(len(self.employee_data.salaries)):
+            total += self.employee_data.salaries[i]
+        return {"total salaries": total}
