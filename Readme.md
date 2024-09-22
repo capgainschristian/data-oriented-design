@@ -19,7 +19,7 @@ Data-Oriented Programming (DOP) organizes data in a way that optmizies memory ac
 Practicing Data-Oriented Programming allows a developer to think of solving problems differently. While Object-Oriented Programming is more intuitive for humans, Data-Oriented Programming aligns more with how the hardware works.
 
 ## Design
-The EmployeeData class fully encapsulates employee-related data management. The Controller class manages operations on that data. Separating data from control logic allows for single responsibility, flexibility, and extensibility. For example, new fields or methods can be added to EmployeeData without affecting other parts of the program. Likewise, you can easily add new retrieval functions or updating existing ones without affecting the EmployeeData class.
+The **EmployeeData** class fully encapsulates employee-related data management. The **Controller** class manages operations on that data. Separating data from control logic allows for single responsibility, flexibility, and extensibility. For example, new fields or methods can be added to **EmployeeData** without affecting other parts of the program. Likewise, you can easily add new retrieval functions or updating existing ones without affecting the **EmployeeData** class.
 
 ## Usage
 
