@@ -1,9 +1,7 @@
 # Data Oriented Programming
 
 ## Description
-Experimentation with Data-Oriented Programming. Data-Oriented Programming (DOP) focuses on organizing data in a way that optimizes memory access patterns, improving cache efficiency and performance. It emphasizes processing large, homogeneous datasets in bulk by separating data storage from the logic that operates on it. Unlike Object-Oriented Programming, which groups behavior with data, DOP prioritizes how data is structured in memory to maximize performance, particularly for high-throughput or parallelizable tasks.
-
-Data-Oriented Programming (DOP) organizes data in a way that  optimizes memory access patterns, improving cache efficiency and performance. It allows processing datasets in bulk by separating data storage from the logic that operates on it. Unlike Object-Oriented Programming (OOP), DOP prirotizies how data is structured in memory versus grouping behavior with data (Struct of Arrays vs Array of Structs). DOP outperforms OOP in specific scenarios:
+Experimentation with Data-Oriented Programming. Data-Oriented Programming (DOP) organizes data in a way that  optimizes memory access patterns, improving cache efficiency and performance. It allows processing datasets in bulk by separating data storage from the logic that operates on it. Unlike Object-Oriented Programming (OOP), DOP prirotizies how data is structured in memory versus grouping behavior with data (Struct of Arrays vs Array of Structs). DOP outperforms OOP in specific scenarios:
 
 1) **Batch Processing of Large Data Sets:** Processing large arrays of data, such as totaling employee salaries in one go.
 
