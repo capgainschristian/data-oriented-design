@@ -19,7 +19,7 @@ class EmployeeDataController:
         avg_total = 0
         for i in range(len(self.employee_data.salaries)):
             avg_total += self.employee_data.salaries[i]
-        return { "average salary": avg_total}
+        return { "average salary": round(avg_total, 2)}
     
     def find_highest_lowest_salary(self):
         lowest = 0
@@ -30,12 +30,12 @@ class EmployeeDataController:
             elif self.employee_data.salaries[i] > highest:
                 highest = self.employee_data.salaries[i]
         return {
-            "lowest salary": lowest,
-            "highest salary": highest,
+            "lowest salary": round(lowest, 2),
+            "highest salary": round(highest, 2),
         }
     
     def get_total_salaries(self):
         total = 0
         for i in range(len(self.employee_data.salaries)):
             total += self.employee_data.salaries[i]
-        return {"total salaries": total}
+        return {"total salaries": round(total, 2)}

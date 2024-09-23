@@ -17,7 +17,7 @@ last_names = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Mille
 def generate_name():
     return f"{random.choice(first_names)} {random.choice(last_names)}"
 
-for i in range(50):
+for i in range(100):
     id = i + 1
     name = generate_name()
     salary = round(random.uniform(30000, 150000), 2)
@@ -26,8 +26,10 @@ for i in range(50):
     
     employee_data.add_employee(id, name, salary, department, favorite_food)
 
+
 print(controller.get_all_employees())
 print(controller.get_total_employees())
 print(controller.get_average_salary())
 print(controller.find_highest_lowest_salary())
 print(controller.get_total_salaries())
+print(employee_data.lookup_employee(23))
