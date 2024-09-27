@@ -34,7 +34,7 @@ docker compose up
 If you don't, while you're in the root directory, run:
 
 ```
-python -m tests.test_main
+python3 main.py
 ```
 
 ### Working on the Application
