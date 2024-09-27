@@ -1,31 +1,35 @@
+import random
+
 from employee_data.employee_data import EmployeeData
 from controllers.employee_controller import EmployeeDataController
 
 employee_data = EmployeeData()
 controller = EmployeeDataController(employee_data)
 
-employee_data.add_employee(1, "Christian", 200000, "IT", "Pizza")
-employee_data.add_employee(2, "Bob", 60000, "HR", "Sushi")
-employee_data.add_employee(3, "Michael", 125000, "Sales", "Tacos")
-employee_data.add_employee(4, "John", 80000, "Operations", "Pasta")
-employee_data.add_employee(5, "Randy", 73000, "IT", "Burgers")
-employee_data.add_employee(6, "Lisa", 110000, "Marketing", "Salad")
-employee_data.add_employee(7, "Rachael", 175000, "Sales", "Ice Cream")
+foods = ["Pizza", "Sushi", "Tacos", "Pasta", "Burgers", "Salad", "Ice Cream", "Steak", "Curry", "Sushi"]
 
-employee_data.update_employee(2, name="John")
+first_names = ["John", "Jane", "Michael", "Emily", "David", "Sarah", "Robert", "Emma", "William", "Olivia",
+               "James", "Sophia", "Daniel", "Ava", "Joseph", "Mia", "Thomas", "Charlotte", "Christopher", "Amelia"]
 
-john = employee_data.lookup_employee(2)
-print(john)
+last_names = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis", "Rodriguez", "Martinez",
+              "Hernandez", "Lopez", "Gonzalez", "Wilson", "Anderson", "Thomas", "Taylor", "Moore", "Jackson", "Martin"]
 
-employee_data.delete_employee(3)
+def generate_name():
+    return f"{random.choice(first_names)} {random.choice(last_names)}"
 
-deleted = employee_data.lookup_employee(3)
-print(deleted)
-christian = employee_data.employee_name_lookup('Christian')
-print(christian)
+for i in range(100):
+    id = i + 1
+    name = generate_name()
+    salary = round(random.uniform(30000, 150000), 2)
+    department = random.choice(employee_data.available_departments)
+    favorite_food = random.choice(foods)
+    
+    employee_data.add_employee(id, name, salary, department, favorite_food)
+
 
 print(controller.get_all_employees())
 print(controller.get_total_employees())
 print(controller.get_average_salary())
 print(controller.find_highest_lowest_salary())
 print(controller.get_total_salaries())
+print(employee_data.lookup_employee(23))
