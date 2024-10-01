@@ -1,11 +1,12 @@
 class EmployeeData:
+    available_departments = ["HR", "IT", "Finance", "Marketing", "Sales", "Operations"]
+
     def __init__(self):
         self.ids = []
         self.names = []
         self.salaries = []
         self.departments = []
         self.favorite_foods = []
-        self.available_departments = ["HR", "IT", "Finance", "Marketing", "Sales", "Operations"]
     
     def add_employee(self, id, name, salary, department, favorite_food):
         if id in self.ids:
