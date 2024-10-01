@@ -7,6 +7,7 @@ class EmployeeData:
         self.salaries = []
         self.departments = []
         self.favorite_foods = []
+        self._size = 0
     
     def add_employee(self, id, name, salary, department, favorite_food):
         if id in self.ids:
@@ -19,6 +20,8 @@ class EmployeeData:
             self.salaries.append(salary)
             self.departments.append(department)
             self.favorite_foods.append(favorite_food)
+
+            self._size += 1
     
     def delete_employee(self, id):
         if id in self.ids:
@@ -28,6 +31,8 @@ class EmployeeData:
             self.salaries.pop(index)
             self.departments.pop(index)
             self.favorite_foods.pop(index)
+
+            self._size -= 1
         else:
             print(f"Employee with ID {id} not found.")
     
@@ -71,3 +76,10 @@ class EmployeeData:
         else:
             print(f"Employee with name {name} not found.")
             return None
+        
+    def __len__(self):
+        return self._size
+    
+    def __iter__(self):
+        for employee_id in self.ids:
+            yield self.lookup_employee(employee_id)

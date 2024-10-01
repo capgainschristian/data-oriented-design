@@ -3,16 +3,11 @@ class EmployeeDataController:
         self.employee_data = employee_data
 
     def get_all_employees(self):
-        employees = []
-        for i in range(len(self.employee_data.names)):
-            employees.append(self.employee_data.names[i])
-
-        return employees
+        for employee in self.employee_data:
+             print(employee)
     
     def get_total_employees(self):
-        total = 0
-        for i in range(len(self.employee_data.names)):
-            total += 1
+        total = len(self.employee_data)
         return total
     
     def get_average_salary(self):
