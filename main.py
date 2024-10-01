@@ -27,7 +27,7 @@ for i in range(100):
     employee_data.add_employee(id, name, salary, department, favorite_food)
 
 
-controller.get_all_employees()
+print(controller.get_all_employees())
 print(controller.get_total_employees())
 print(controller.get_average_salary())
 print(controller.find_highest_lowest_salary())
