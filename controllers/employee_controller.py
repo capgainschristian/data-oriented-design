@@ -3,10 +3,8 @@ class EmployeeDataController:
         self.employee_data = employee_data
 
     def get_all_employees(self):
-        employees = []
         for employee in self.employee_data:
-             employees.append(employee)
-        return employees
+            print(employee)
     
     def get_total_employees(self):
         total = len(self.employee_data)
