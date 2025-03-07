@@ -43,7 +43,7 @@ class EmployeeData:
                 self.names[index] = name
             if salary is not None:
                 self.salaries[index] = salary
-            if department is not None and department in self.available_apartments:
+            if department is not None and department in self.available_departments:
                 self.departments[index] = department
             if favorite_food is not None:
                 self.favorite_foods[index] = favorite_food
