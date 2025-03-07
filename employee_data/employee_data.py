@@ -34,7 +34,7 @@ class EmployeeData:
 
             self._size -= 1
         else:
-            print(f"Employee with ID {id} not found.")
+            return None
     
     def update_employee(self, id, name=None, salary=None, department=None, favorite_food=None):
         if id in self.ids:
@@ -48,7 +48,7 @@ class EmployeeData:
             if favorite_food is not None:
                 self.favorite_foods[index] = favorite_food
         else:
-            print(f"Employee with ID {id} not found.")
+            return None
     def lookup_employee(self, id):
         if id in self.ids:
             index = self.ids.index(id)
